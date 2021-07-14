@@ -18,7 +18,7 @@ pipeline {
                         
 
 
-                                git 'https://github.com/ghaikanav/assessment-springboot.git'
+                                git branch: 'main' , url: 'https://github.com/ghaikanav/assessment-springboot.git'
 
                                 // Run Maven on a Unix agent.
                                 bat "mvn -Dmaven.test.failure.ignore=true clean install"
