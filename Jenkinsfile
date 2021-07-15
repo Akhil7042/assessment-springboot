@@ -23,7 +23,15 @@ pipeline {
                                 // Run Maven on a Unix agent.
                                 bat "mvn -Dmaven.test.failure.ignore=true clean install"
 
-                                }
+                                 bat "mvn sonar:sonar \
+                                        -Dsonar.projectKey=PSBA \
+                                            -Dsonar.host.url=https://tools.publicis.sapient.com/sonar \
+  -                                         Dsonar.login=9eaeff26e31c8478bde4afc34ef3c63a7d77a2a9"
+                            
+                               
+                            
+                            
+                            }
 
                 }
 
