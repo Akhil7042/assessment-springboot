@@ -21,7 +21,7 @@ pipeline {
                                 git branch: 'main' , url: 'https://github.com/ghaikanav/assessment-springboot.git'
 
                                 // Run Maven on a Unix agent.
-                                bat "mvn -Dmaven.test.failure.ignore=true clean install"
+                                bat "mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=true"
 
                                
                                
