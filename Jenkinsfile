@@ -24,9 +24,9 @@ pipeline {
                                 bat "mvn -Dmaven.test.failure.ignore=true clean install"
 
                                  bat "mvn sonar:sonar \"
-                                 bat     "  -Dsonar.projectKey=PSBA \ "
-                                    bat      "  -Dsonar.host.url=https://tools.publicis.sapient.com/sonar \"
-  -                                     bat  "   Dsonar.login=9eaeff26e31c8478bde4afc34ef3c63a7d77a2a9" "
+                                 bat "-Dsonar.projectKey=PSBA \ "
+                                 bat "-Dsonar.host.url=https://tools.publicis.sapient.com/sonar \"
+  -                              bat "Dsonar.login=9eaeff26e31c8478bde4afc34ef3c63a7d77a2a9" "
                             
                                
                             
