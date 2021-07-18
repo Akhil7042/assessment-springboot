@@ -14,3 +14,5 @@ java -jar ./target/springboot-0.0.1-SNAPSHOT.jar
 4. To run the test cases, all test cases will be run
 
 mvn test
+
+5. Create a Jenkinsfile and dockerize the application.
