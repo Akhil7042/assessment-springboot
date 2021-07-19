@@ -35,7 +35,10 @@ pipeline {
              
                     steps
                     {
-                     bat "mvn sonar:sonar -Dsonar.projectKey=Batch4 -Dsonar.host.url=https://tools.publicis.sapient.com/sonar -Dsonar.login=c55f258ead04dbad743988a2b53b1419c1bcb6f0"   
+                     bat "mvn sonar:sonar \
+  -Dsonar.projectKey=PSBA \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=31136b0c7d8997392ebaeb5ab57042ebfafc1b39"   
                         
                     }
                     
