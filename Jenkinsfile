@@ -35,10 +35,7 @@ pipeline {
              
                     steps
                     {
-                     bat "mvn sonar:sonar \
-  -Dsonar.projectKey=Batch4 \
-  -Dsonar.host.url=https://tools.publicis.sapient.com/sonar \
-  -Dsonar.login=c55f258ead04dbad743988a2b53b1419c1bcb6f0"   
+                     bat "mvn sonar:sonar -Dsonar.projectKey=Batch4 -Dsonar.host.url=https://tools.publicis.sapient.com/sonar -Dsonar.login=c55f258ead04dbad743988a2b53b1419c1bcb6f0"   
                         
                     }
                     
@@ -47,11 +44,15 @@ pipeline {
                     
                 }
         
-         stage("Quality gate") {
-            steps {
+         stage("Quality gate")
+        {
+            steps 
+            {
                 waitForQualityGate abortPipeline: true
             }
-        }
+             
+         }
+        
 
                 stage('Build') 
                 {
